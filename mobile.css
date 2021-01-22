@@ -1,0 +1,32 @@
+/* mobile.css */
+
+/* Author: Ryan Jay Salapare, 000823653 */
+
+@media only screen and (max-width: 600px)
+{
+	.top img, .top p
+	{
+		display: none;
+	}
+
+	header nav li
+	{
+	display: block;
+	margin-bottom: 5px;
+	}
+	
+	header nav a
+	{
+		border-right: none;
+	}
+	
+	.information div
+	{
+		grid-column: 1/span 2;
+	}
+	
+	.gallery div
+	{
+		grid-column: 1/ span 2;
+	}
+}

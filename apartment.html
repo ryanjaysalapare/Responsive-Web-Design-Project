@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Author: Ryan Jay Salapare, 000823653 -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sandy and Leslie's apartment</title>
+	<link href="apartment_layout.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="apartment_layout2.css" rel="stylesheet" type="text/css" media="print" />
+	<link href="mobile.css" rel="stylesheet" type="text/css" />
+
+
+	<style>
+		.top {
+			text-align: center;
+		}
+
+		.information {
+			display: grid;
+			grid-template-columns: 4fr 3fr 1fr;
+		}
+
+		.information div {
+			margin: 5px;
+		}
+
+		h2 {
+			padding: 5px;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		.gallery div {
+			margin-right: 60px;
+		}
+
+		.gallery h3 {
+			padding: 10px;
+		}
+
+		footer {
+			text-align: center;
+		}
+
+		#living {
+			border: none;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div class="top">
+		<h1>Sandy and Leslie's Apartment</h1>
+		<p> Click a room for a detailed view.</p>
+		<img src="images/apartmentfloorplan.jpg" alt="Apartment Floor Plan" usemap="#floorplan">
+	</div>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="apartment.html">Apartment</a></li>
+				<li><a href="bedroom.html">Bedroom 1</a></li>
+				<li><a href="bedroom.html">Bedroom 2</a></li>
+				<li><a href="diningroom.html">Dining Room</a></li>
+				<li><a href="kitchen.html">Kitchen</a></li>
+				<li><a href="livingroom.html" id="living">Living Room</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<map name="floorplan">
+		<area shape="rect" coords="48,2,189,157" href="bedroom.html" alt="Bedroom1">
+		<area shape="rect" coords="204,8,345,160" href="bedroom.html" alt="Bedroom2">
+		<area shape="rect" coords="246,232,393,395" href="kitchen.html" alt="Kitchen">
+		<area shape="circle" coords="412,137,45" href="diningroom.html" alt="Dining Room">
+		<area shape="poly" coords="475,168,528,174,546,394,419,393,408,202" href="livingroom.html" alt="Living Room">
+		<area shape="default" href="apartment.html" alt="Apartment">
+	</map>
+
+	<div class="information">
+		<div id="survey">
+			<h2>Survey</h2>
+			<form method="get" action="https://csunix.mohawkcollege.ca/tooltime/showit.pl">
+				<label>How did you find out about this apartment? Check any that apply:</label><br>
+				<input type="checkbox" name="findout" id="websearch" value="Web search">
+				<label for="websearch">Web Search</label>
+				<input type="checkbox" name="findout" id="friend" value="Friend">
+				<label for="friend">Friend</label>
+				<input type="checkbox" name="findout" id="newspaper" value="Newspaper">
+				<label for="newspaper">Newspaper</label>
+				<div id="buttons">
+					<input type="submit" value="Submit">
+					<input type="reset" value="Reset Form">
+				</div>
+			</form>
+
+			<h2>Welcome Message</h2>
+			<audio controls>
+				<source src="images/apartment.mp3" type="audio/mpeg">
+			</audio>
+			<p>Transcript: Hello. Welcome to our apartment. You'll really enjoy living here. The rooms
+				are spacious and the apartment building amenities are fantastic. We look forward
+				to hearing from you!</p>
+		</div>
+
+		<div class="table">
+			<h2>Apartment Services</h2>
+			<table>
+				<tr>
+					<th>Service</th>
+					<th>Day/Hours</th>
+				</tr>
+
+				<tr>
+					<th>Gym</th>
+					<td rowspan="2" id="schedule">Monday-Friday 6am - 10pm<br>
+						Saturday 8am - 8pm<br>
+						Sunday 8am - 5pm
+					</td>
+				</tr>
+
+				<tr>
+					<th>Pool</th>
+				</tr>
+
+				<tr>
+					<th>Laundry</th>
+					<td>24/7</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" id="lastCol">Please do not allow people you do not know to use these facilities.
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="location">
+			<h2>Location</h2>
+			<img src="images/location.png" alt="Location">
+		</div>
+	</div>
+
+	<div id="pictures">
+		<h2>Gallery</h2>
+		<div class="gallery">
+			<div id="balcony">
+				<h3>Balcony</h3>
+				<img src="images/balcony_sm.jpg" alt="Balcony">
+			</div>
+
+			<div>
+				<h3>Bathroom</h3>
+				<img src="images/bathroom_sm.jpg" alt="Bathroom">
+			</div>
+
+			<div>
+				<h3>Bedroom</h3>
+				<img src="images/bedroom_sm.jpg" alt="Bedroom">
+			</div>
+
+			<div>
+				<h3>Dining Room</h3>
+				<img src="images/diningroom_sm.jpg" alt="Dining Room">
+			</div>
+
+			<div>
+				<h3>Kitchen</h3>
+				<img src="images/kitchen_sm.jpg" alt="Kitchen">
+			</div>
+
+			<div>
+				<h3>Living Room</h3>
+				<img src="images/livingroom_sm.jpg" alt="Living Room">
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>For more information contact: <a href="apartment@example.com">apartment@example.com</a></p>
+		<p>&#169; Sandy and Leslie 2020</p>
+	</footer>
+
+</body>
+
+
+
+</html>
